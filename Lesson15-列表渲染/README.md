@@ -1,0 +1,31 @@
+列表渲染
+=========
+
+## 知识点
+
+* v-for
+
+### v-for
+
+循环数组元素，整理内容显示到页面上。
+
+~~~html
+<div id="App">
+    <ul>
+        <li v-for="(game, index) in games">({{index}}) {{game.title}} / 售价：{{game.price}}元</li>
+    </ul>
+</div>
+<script>
+    var App = new Vue({
+        el: '#App', 
+        data: {
+            games: [
+                {title:"勇者斗恶龙",price:500},
+                {title:"库跑卡丁车",price:400},
+                {title:"马里奥世界",price:550},
+            ]
+        },
+    });
+</script>
+~~~
+
